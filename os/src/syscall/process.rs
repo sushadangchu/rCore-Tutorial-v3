@@ -6,7 +6,7 @@ use crate::task::{
     add_task,
 };
 use crate::timer::get_time_ms;
-use crate::mm::{
+use memory::{
     translated_str,
     translated_refmut,
 };

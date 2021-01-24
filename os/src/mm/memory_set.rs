@@ -1,21 +1,21 @@
-use super::{PageTable, PageTableEntry, PTEFlags};
-use super::{VirtPageNum, VirtAddr, PhysPageNum, PhysAddr};
-use super::{FrameTracker, frame_alloc};
-use super::{VPNRange, StepByOne};
+use memory::{PageTable, PageTableEntry, PTEFlags};
+use memory::{VirtPageNum, VirtAddr, PhysPageNum, PhysAddr};
+use memory::{FrameTracker, frame_alloc};
+use memory::{VPNRange, StepByOne};
 use alloc::collections::BTreeMap;
-use alloc::vec::Vec;
 use riscv::register::satp;
+use alloc::vec::Vec;
 use alloc::sync::Arc;
 use lazy_static::*;
 use spin::Mutex;
-use crate::config::{
+use os_config::config::{
     MEMORY_END,
     PAGE_SIZE,
     TRAMPOLINE,
     TRAP_CONTEXT,
     USER_STACK_SIZE,
-    MMIO,
 };
+use crate::config::MMIO;
 
 extern "C" {
     fn stext();
@@ -334,25 +334,4 @@ bitflags! {
         const X = 1 << 3;
         const U = 1 << 4;
     }
-}
-
-#[allow(unused)]
-pub fn remap_test() {
-    let mut kernel_space = KERNEL_SPACE.lock();
-    let mid_text: VirtAddr = ((stext as usize + etext as usize) / 2).into();
-    let mid_rodata: VirtAddr = ((srodata as usize + erodata as usize) / 2).into();
-    let mid_data: VirtAddr = ((sdata as usize + edata as usize) / 2).into();
-    assert_eq!(
-        kernel_space.page_table.translate(mid_text.floor()).unwrap().writable(),
-        false
-    );
-    assert_eq!(
-        kernel_space.page_table.translate(mid_rodata.floor()).unwrap().writable(),
-        false,
-    );
-    assert_eq!(
-        kernel_space.page_table.translate(mid_data.floor()).unwrap().executable(),
-        false,
-    );
-    println!("remap_test passed!");
 }

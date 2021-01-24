@@ -9,7 +9,7 @@ use bitflags::*;
 use alloc::vec::Vec;
 use spin::Mutex;
 use super::File;
-use crate::mm::UserBuffer;
+use memory::UserBuffer;
 use core::any::Any;
 
 pub struct OSInode {

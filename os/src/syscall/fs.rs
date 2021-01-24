@@ -1,4 +1,4 @@
-use crate::mm::{
+use memory::{
     UserBuffer,
     translated_byte_buffer,
     translated_refmut,

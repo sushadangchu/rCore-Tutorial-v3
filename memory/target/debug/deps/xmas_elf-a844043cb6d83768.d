@@ -1,0 +1,13 @@
+/home/ldl/rCore-Tutorial-v3/memory/target/debug/deps/xmas_elf-a844043cb6d83768.rmeta: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/header.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/sections.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/program.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/symbol_table.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/dynamic.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/hash.rs
+
+/home/ldl/rCore-Tutorial-v3/memory/target/debug/deps/libxmas_elf-a844043cb6d83768.rlib: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/header.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/sections.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/program.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/symbol_table.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/dynamic.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/hash.rs
+
+/home/ldl/rCore-Tutorial-v3/memory/target/debug/deps/xmas_elf-a844043cb6d83768.d: /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/lib.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/header.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/sections.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/program.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/symbol_table.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/dynamic.rs /root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/hash.rs
+
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/lib.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/header.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/sections.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/program.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/symbol_table.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/dynamic.rs:
+/root/.cargo/registry/src/github.com-1ecc6299db9ec823/xmas-elf-0.7.0/src/hash.rs:

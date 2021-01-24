@@ -1,6 +1,7 @@
-use crate::mm::{MemorySet, PhysPageNum, KERNEL_SPACE, VirtAddr};
+use crate::mm::{MemorySet, KERNEL_SPACE};
+use memory::{PhysPageNum, VirtAddr};
 use crate::trap::{TrapContext, trap_handler};
-use crate::config::{TRAP_CONTEXT};
+use os_config::config::{TRAP_CONTEXT};
 use super::TaskContext;
 use super::{PidHandle, pid_alloc, KernelStack};
 use alloc::sync::{Weak, Arc};

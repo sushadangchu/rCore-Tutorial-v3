@@ -1,16 +1,16 @@
 
 use virtio_drivers::{VirtIOBlk, VirtIOHeader};
-use crate::mm::{
+use memory::{
     PhysAddr,
     VirtAddr,
-    frame_alloc,
-    frame_dealloc,
     PhysPageNum,
-    FrameTracker,
     StepByOne,
     PageTable,
-    kernel_token,
+    frame_alloc,
+    frame_dealloc,
+    FrameTracker,
 };
+use crate::mm::kernel_token;
 use super::BlockDevice;
 use spin::Mutex;
 use alloc::vec::Vec;
