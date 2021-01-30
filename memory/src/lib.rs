@@ -9,6 +9,9 @@ extern crate alloc;
 #[macro_use]
 extern crate bitflags;
 
+#[macro_use]
+extern crate sbi;
+
 pub mod heap_allocator;
 pub mod address;
 pub mod frame_allocator;
@@ -29,3 +32,9 @@ pub use page_table::{
     UserBufferIterator,
 };
 pub use memory_set::{MemorySet, KERNEL_SPACE, MapPermission, kernel_token};
+
+pub fn init() {
+    heap_allocator::init_heap();
+    frame_allocator::init_frame_allocator();
+    KERNEL_SPACE.clone().lock().activate();
+}

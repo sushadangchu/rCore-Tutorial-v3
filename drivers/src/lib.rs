@@ -2,6 +2,9 @@
 
 extern crate alloc;
 
-pub mod block;
+#[macro_use]
+extern crate sbi;
+
+mod block;
 
 pub use block::BLOCK_DEVICE;

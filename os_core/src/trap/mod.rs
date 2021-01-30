@@ -19,12 +19,12 @@ use crate::task::{
     current_user_token,
     current_trap_cx,
 };
-use sbi::timer::set_next_trigger;
+use sbi::set_next_trigger;
 use os_config::config::{TRAP_CONTEXT, TRAMPOLINE};
 
 global_asm!(include_str!("trap.S"));
 
-pub fn init() {
+pub fn trap_init() {
     set_kernel_trap_entry();
 }
 

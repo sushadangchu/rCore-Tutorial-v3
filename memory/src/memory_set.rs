@@ -92,46 +92,46 @@ impl MemorySet {
         // map trampoline
         memory_set.map_trampoline();
         // map kernel sections
-        //println!(".text [{:#x}, {:#x})", stext as usize, etext as usize);
-        //println!(".rodata [{:#x}, {:#x})", srodata as usize, erodata as usize);
-        //println!(".data [{:#x}, {:#x})", sdata as usize, edata as usize);
-        //println!(".bss [{:#x}, {:#x})", sbss_with_stack as usize, ebss as usize);
-        //println!("mapping .text section");
+        println!(".text [{:#x}, {:#x})", stext as usize, etext as usize);
+        println!(".rodata [{:#x}, {:#x})", srodata as usize, erodata as usize);
+        println!(".data [{:#x}, {:#x})", sdata as usize, edata as usize);
+        println!(".bss [{:#x}, {:#x})", sbss_with_stack as usize, ebss as usize);
+        println!("mapping .text section");
         memory_set.push(MapArea::new(
             (stext as usize).into(),
             (etext as usize).into(),
             MapType::Identical,
             MapPermission::R | MapPermission::X,
         ), None);
-        //println!("mapping .rodata section");
+        println!("mapping .rodata section");
         memory_set.push(MapArea::new(
             (srodata as usize).into(),
             (erodata as usize).into(),
             MapType::Identical,
             MapPermission::R,
         ), None);
-        //println!("mapping .data section");
+        println!("mapping .data section");
         memory_set.push(MapArea::new(
             (sdata as usize).into(),
             (edata as usize).into(),
             MapType::Identical,
             MapPermission::R | MapPermission::W,
         ), None);
-        //println!("mapping .bss section");
+        println!("mapping .bss section");
         memory_set.push(MapArea::new(
             (sbss_with_stack as usize).into(),
             (ebss as usize).into(),
             MapType::Identical,
             MapPermission::R | MapPermission::W,
         ), None);
-        //println!("mapping physical memory");
+        println!("mapping physical memory");
         memory_set.push(MapArea::new(
             (ekernel as usize).into(),
             MEMORY_END.into(),
             MapType::Identical,
             MapPermission::R | MapPermission::W,
         ), None);
-        //println!("mapping memory-mapped registers");
+        println!("mapping memory-mapped registers");
         for pair in MMIO {
             memory_set.push(MapArea::new(
                 (*pair).0.into(),

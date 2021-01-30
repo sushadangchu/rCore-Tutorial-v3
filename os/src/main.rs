@@ -1,20 +1,9 @@
 #![no_std]
 #![no_main]
 #![feature(global_asm)]
-#![feature(llvm_asm)]
-#![feature(const_in_array_repeat_expressions)]
-
-extern crate alloc;
 
 #[macro_use]
 extern crate sbi;
-
-#[macro_use]
-mod syscall;
-mod trap;
-mod task;
-mod mm;
-mod fs;
 
 global_asm!(include_str!("entry.asm"));
 
@@ -32,12 +21,12 @@ fn clear_bss() {
 pub fn rust_main() -> ! {
     clear_bss();
     println!("[kernel] Hello, world!");
-    mm::init();
-    trap::init();
-    trap::enable_timer_interrupt();
-    sbi::timer::set_next_trigger();
-    fs::list_apps();
-    task::add_initproc();
-    task::run_tasks();
+    memory::init();
+    os_core::trap_init();
+    os_core::enable_timer_interrupt();
+    sbi::set_next_trigger();
+    os_core::list_apps();
+    os_core::add_initproc();
+    os_core::run_tasks();
     panic!("Unreachable in rust_main!");
 }

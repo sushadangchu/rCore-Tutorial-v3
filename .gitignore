@@ -9,3 +9,5 @@ user/Cargo.lock
 memory/target/*
 drivers/target/*
 sbi/target/*
+os_core/target/*
+os_config/target/*
