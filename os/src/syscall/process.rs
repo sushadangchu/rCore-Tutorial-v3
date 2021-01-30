@@ -5,7 +5,7 @@ use crate::task::{
     current_user_token,
     add_task,
 };
-use crate::timer::get_time_ms;
+use sbi::timer::get_time_ms;
 use memory::{
     translated_str,
     translated_refmut,

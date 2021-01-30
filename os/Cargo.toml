@@ -16,6 +16,7 @@ easy-fs = { path = "../easy-fs" }
 memory = { path = "../memory" }
 os_config = { path = "../os_config" }
 drivers = { path = "../drivers" }
+sbi = { path = "../sbi" }
 
 [features]
 board_qemu = []

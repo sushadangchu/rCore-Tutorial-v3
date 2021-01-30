@@ -2,23 +2,17 @@
 #![no_main]
 #![feature(global_asm)]
 #![feature(llvm_asm)]
-#![feature(panic_info_message)]
 #![feature(const_in_array_repeat_expressions)]
-#![feature(alloc_error_handler)]
 
 extern crate alloc;
-extern crate memory;
-extern crate drivers;
 
 #[macro_use]
-mod console;
-mod lang_items;
-mod sbi;
+extern crate sbi;
+
+#[macro_use]
 mod syscall;
 mod trap;
-mod config;
 mod task;
-mod timer;
 mod mm;
 mod fs;
 
@@ -41,7 +35,7 @@ pub fn rust_main() -> ! {
     mm::init();
     trap::init();
     trap::enable_timer_interrupt();
-    timer::set_next_trigger();
+    sbi::timer::set_next_trigger();
     fs::list_apps();
     task::add_initproc();
     task::run_tasks();

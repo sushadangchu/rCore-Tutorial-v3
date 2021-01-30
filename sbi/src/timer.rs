@@ -1,6 +1,6 @@
 use riscv::register::time;
-use crate::sbi::set_timer;
-use crate::config::CLOCK_FREQ;
+use super::set_timer;
+use os_config::config::CLOCK_FREQ;
 
 const TICKS_PER_SEC: usize = 100;
 const MSEC_PER_SEC: usize = 1000;

@@ -19,7 +19,7 @@ use crate::task::{
     current_user_token,
     current_trap_cx,
 };
-use crate::timer::set_next_trigger;
+use sbi::timer::set_next_trigger;
 use os_config::config::{TRAP_CONTEXT, TRAMPOLINE};
 
 global_asm!(include_str!("trap.S"));
