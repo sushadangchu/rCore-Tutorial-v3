@@ -6,12 +6,14 @@
 
 extern crate alloc;
 
+#[macro_use]
 extern crate bitflags;
 
 pub mod heap_allocator;
 pub mod address;
 pub mod frame_allocator;
 pub mod page_table;
+pub mod memory_set;
 
 pub use page_table::PTEFlags;
 pub use address::VPNRange;
@@ -26,3 +28,4 @@ pub use page_table::{
     UserBuffer,
     UserBufferIterator,
 };
+pub use memory_set::{MemorySet, KERNEL_SPACE, MapPermission, kernel_token};

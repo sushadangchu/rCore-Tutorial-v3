@@ -8,9 +8,7 @@
 
 extern crate alloc;
 extern crate memory;
-
-#[macro_use]
-extern crate bitflags;
+extern crate drivers;
 
 #[macro_use]
 mod console;
@@ -23,7 +21,6 @@ mod task;
 mod timer;
 mod mm;
 mod fs;
-mod drivers;
 
 global_asm!(include_str!("entry.asm"));
 

@@ -9,8 +9,8 @@ use memory::{
     frame_alloc,
     frame_dealloc,
     FrameTracker,
+    kernel_token,
 };
-use crate::mm::kernel_token;
 use super::BlockDevice;
 use spin::Mutex;
 use alloc::vec::Vec;

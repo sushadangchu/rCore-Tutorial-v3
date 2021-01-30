@@ -7,3 +7,4 @@ user/target/*
 user/.idea/*
 user/Cargo.lock
 memory/target/*
+drivers/target/*

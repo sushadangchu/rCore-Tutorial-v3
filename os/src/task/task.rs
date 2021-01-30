@@ -1,5 +1,4 @@
-use crate::mm::{MemorySet, KERNEL_SPACE};
-use memory::{PhysPageNum, VirtAddr};
+use memory::{MemorySet, KERNEL_SPACE, PhysPageNum, VirtAddr};
 use crate::trap::{TrapContext, trap_handler};
 use os_config::config::{TRAP_CONTEXT};
 use super::TaskContext;

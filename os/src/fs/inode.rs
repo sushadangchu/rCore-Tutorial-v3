@@ -2,7 +2,7 @@ use easy_fs::{
     EasyFileSystem,
     Inode,
 };
-use crate::drivers::BLOCK_DEVICE;
+use drivers::BLOCK_DEVICE;
 use alloc::sync::Arc;
 use lazy_static::*;
 use bitflags::*;
